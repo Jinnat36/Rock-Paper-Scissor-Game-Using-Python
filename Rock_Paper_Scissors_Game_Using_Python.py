@@ -13,6 +13,7 @@ print(rules .center(170))
 
 # Here, user enter his/her name. and  gets a best of luck message .
 user_name=input("Enter Your Name : ")
+
 print(f"\033[1;33mBest Of Luck!\033[0m {user_name.capitalize()}")
 
 # user choices.
@@ -21,7 +22,20 @@ print("--: Choice word :--\n1.Rock\n2.Paper\n3.Scissor")
 while True:
     # user enter his/her choice here
     uc=input("Enter Your Choice : ")
-    print(f"{user_name.capitalize()} choice is : ",uc.capitalize())
+    match uc:
+        case '1' |'rock':
+            choice="rock"
+            # print(f"{user_name.capitalize()} choice is : ",uc.capitalize())
+        case '2'| 'paper':
+            choice="paper"
+            # print(f"{user_name.capitalize()} choice is : ",uc.capitalize())
+        case '3' | 'scissor':
+            choice="scissor"
+            # print(f"{user_name.capitalize()} choice is : ",uc.capitalize())
+        case _:
+            print("w")
+
+    print(f"{user_name.capitalize()} choice is : ",choice.capitalize())
 
 
 
@@ -29,27 +43,27 @@ while True:
     print("Now, Its Computer Turn")
     time.sleep(1)
     options=['rock','paper','scissor']
-    cc=random.choice(options)
-    print("Computer Choice is : ",cc.capitalize())
+    computer_choice=random.choice(options)
+    print("Computer Choice is : ",computer_choice.capitalize())
 
     #  user choice VS computer choice
-    print(f"\033[31m{uc.upper()}\033[0m VS \033[31m{cc.upper()}\033[0m")
+    print(f"\033[31m{choice.upper()}\033[0m VS \033[31m{computer_choice.upper()}\033[0m")
 
     #  write the main logic here
     
-    if uc==cc:
+    if choice==computer_choice:
         print("The Game Is Draw.")
-    elif uc=='rock'and cc=='paper':
+    elif choice=='rock'and computer_choice=='paper':
         print("Paper Win The Game")
-    elif uc=='rock' and cc=='scissor':
+    elif choice=='rock' and computer_choice=='scissor':
         print("Rock Win The Game")
-    elif uc=='paper' and cc=='scissor':
+    elif choice=='paper' and computer_choice=='scissor':
         print("Scissor Win The Game")
-    elif uc=='paper' and cc=='rock':
+    elif choice=='paper' and computer_choice=='rock':
         print("Paper Win The Game")
-    elif uc=='scissor' and cc=='rock':
+    elif choice=='scissor' and computer_choice=='rock':
         print("Rock Win The Game")
-    elif uc=='scissor' and cc=='paper':
+    elif choice=='scissor' and computer_choice=='paper':
             print("Scissor Win The Game")
 
     print("\nDo you want to play again?(Yes/No)")
