@@ -24,3 +24,6 @@ This is a simple Rock Paper Scissors game implemented in Python. The game allows
 - The computer randomly selects its move from the list of options.
 - The game logic compares the user's choice and the computer's choice to determine the winner.
 - The game continues in a loop until the user decides to stop playing.
+- 
+OUTPUT :--
+  ![Screenshot 2024-07-02 014616](https://github.com/Jinnat36/Rock-Paper-Scissor-Game-Using-Python/assets/157870456/50ad9d74-1e17-4e19-8f05-c50c3b60e0b9)
